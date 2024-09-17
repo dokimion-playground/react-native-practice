@@ -4,7 +4,12 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import BottomTabNavigations from "./BottomTabNavigations";
 import ImageDetailScreen from "@/screen/ImageDetailScreen";
 
-const Stack = createNativeStackNavigator();
+export type RootStackParamList = {
+  BottomTab: undefined;
+  ImageDetail: { url: string };
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function RootStackNavigations() {
   return (

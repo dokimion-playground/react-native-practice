@@ -6,7 +6,12 @@ import FavoriteImageListScreen from "@/screen/FavoriteImageListScreen";
 import { TabIcon } from "@/components/TabIcon";
 import { IconName } from "@/components/Icon";
 
-const Tabs = createBottomTabNavigator();
+type BottomTabParamList = {
+  ImageList: undefined;
+  FavoriteImageList: undefined;
+};
+
+const Tabs = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigations() {
   return (
@@ -21,13 +26,7 @@ export default function BottomTabNavigations() {
             iconName = focused ? "heart" : "heart-outline";
           }
 
-          return (
-            <TabIcon
-              iconName={iconName}
-              iconColor={color}
-              visibleBadge={focused}
-            />
-          );
+          return <TabIcon iconName={iconName} iconColor={color} />;
         },
       })}
     >
