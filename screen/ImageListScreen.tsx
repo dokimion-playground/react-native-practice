@@ -1,11 +1,11 @@
 import React from "react";
-import { View, Text, Button, StyleSheet, FlatList } from "react-native";
+import { View, StyleSheet, FlatList } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { Typography } from "@/components/Typography";
 import { Header } from "@/components/Header/Header";
-import { IMAGE_LIST } from "@/app/constants";
 import PhotoListItem from "@/components/PhotoListItem";
+import { IMAGE_LIST } from "@/constants";
 
 export default function ImageListScreen() {
   return (
