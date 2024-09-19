@@ -10,11 +10,6 @@ import { IMAGE_LIST } from "@/constants";
 export default function ImageListScreen() {
   return (
     <View style={styles.container}>
-      <Header>
-        <Header.Group>
-          <Header.Title title="IMAGE LIST" />
-        </Header.Group>
-      </Header>
       <FlatList
         data={IMAGE_LIST}
         style={{ flex: 1 }}

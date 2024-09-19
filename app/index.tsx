@@ -1,13 +1,12 @@
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { StyleSheet, Text, View } from "react-native";
-
-import RootStackNavigations from "@/navigations/RootStackNavigations";
+import MainDrawerNavigations from "@/navigations/MainDrawerNavigations";
 
 export default function App() {
   return (
     <>
-      <RootStackNavigations />
+      <MainDrawerNavigations />
     </>
   );
 }
