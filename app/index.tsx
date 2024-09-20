@@ -1,13 +1,16 @@
 import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import MainDrawerNavigations from "@/navigations/MainDrawerNavigations";
+import { RecoilRoot } from "recoil";
+import RecoilCustomPersist from "@/components/RecoilCustomPersist";
 
 export default function App() {
   return (
-    <>
-      <MainDrawerNavigations />
-    </>
+    <RecoilRoot>
+      <RecoilCustomPersist>
+        <MainDrawerNavigations />
+      </RecoilCustomPersist>
+    </RecoilRoot>
   );
 }
 
