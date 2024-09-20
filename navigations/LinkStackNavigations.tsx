@@ -5,10 +5,11 @@ import LinkListScreen from "@/screen/LinkListScreen";
 import LinkDetailScreen from "@/screen/LinkDetailScreen";
 import { Button } from "react-native";
 import AddLinkScreren from "@/screen/AddLinkScreren";
+import { LinkItem } from "@/states/atomLinkList";
 
 export type LinkStackParamList = {
   LinkList: undefined;
-  LinkDetail: undefined;
+  LinkDetail: { item: LinkItem };
   AddLink: undefined;
 };
 

@@ -17,8 +17,8 @@ export function Button({
   onPressOut,
   children,
   hitSlop = { left: 0, right: 0, top: 0, bottom: 0 },
-  paddingHorizontal,
-  paddingVertical,
+  paddingHorizontal = 0,
+  paddingVertical = 0,
 }: ButtonProps) {
   return (
     <Pressable
@@ -26,10 +26,13 @@ export function Button({
       onPressOut={onPressOut}
       onPress={onPress}
       hitSlop={hitSlop}
-      style={{
-        paddingHorizontal: paddingHorizontal,
-        paddingVertical: paddingVertical,
-      }}
+      style={({ pressed }) => [
+        {
+          paddingHorizontal: paddingHorizontal,
+          paddingVertical: paddingVertical,
+          opacity: pressed ? 0.8 : 1,
+        },
+      ]}
     >
       {children}
     </Pressable>
